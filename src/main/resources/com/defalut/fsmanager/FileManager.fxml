@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.defalut.fsmanager.FileManagerController" spacing="10" alignment="CENTER">
+    <Label fx:id="selectedFileLabel" text="Текущая директория: "/>
+    <ListView fx:id="fileListView" prefHeight="400" prefWidth="600"/>
+    <Button text="Копировать файл" onMouseClicked="#onCopyFileClick"/>
+</VBox>
