@@ -87,10 +87,10 @@ public class FileManagerController {
             File[] files = directory.listFiles();
 
             if (files != null) {
-                if (file.isHidden()) {
+                for (File file : files) {
+                    if (file.isHidden()) {
                         continue;
                     }
-                for (File file : files) {
                     long fileSize = file.isFile() ? file.length() : 0;
                     fileListView.getItems().add(file.getName() + " (" + fileSize + " байт)");
                 }
